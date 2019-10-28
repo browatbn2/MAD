@@ -1196,7 +1196,6 @@ if __name__ == '__main__':
     parser.add_argument('--dataset-train', default=['vggface2', 'affectnet'], type=str, help='dataset(s) for training.', choices=DATASETS, nargs='+')
     parser.add_argument('--dataset-val', default=['affectnet'], type=str, help='dataset for training.', choices=DATASETS, nargs='+')
     parser.add_argument('--tag', type=str, default=None, help='append string to tensorboard log name')
-    parser.add_argument('--disent', type=int, default=0, help='state of disentanglement (0=disabled, 1=run, 2=train', choices=[0,1,2])
     parser.add_argument('--daug', type=int, default=0, help='state of data augmentation for training')
     parser.add_argument('--train-ae', type=bool_str, default=True, help='train auto-encoder')
     parser.add_argument('--lr', default=0.00002, type=float, help='learning rate for autoencoder')
@@ -1216,6 +1215,7 @@ if __name__ == '__main__':
     parser.add_argument('--no-lssim', default=False, action='store_true', help='without SSIM loss')
 
     # disentanglement
+    parser.add_argument('--disent', type=int, default=0, help='state of disentanglement (0=disabled, 1=run, 2=train', choices=[0,1,2])
     parser.add_argument('--macro-batchsize', default=0, type=int, metavar='N', help='macro batch size')
     parser.add_argument('--no-laug', default=False, action='store_true', help='without augmentation loss')
     parser.add_argument('--no-ldiscyc', default=False, action='store_true', help='without disentanglen cycle loss')
