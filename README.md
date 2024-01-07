@@ -8,9 +8,6 @@ This is the PyTorch implementation of the [ICCV RSLCV-2019](https://rsl-cv.univ-
 ### Adversarial Autoencoder for Multi-Attribute-Disentanglement (MAD)
 *This method is based around two core ideas: first, our framework learns an unsupervised, low-dimensional embedding of faces using an adversarial autoencoder that is able to synthesize high-quality face images. Second, a supervised disentanglement splits the low-dimensional embedding vector into four sub-vectors, each of which contains separated information about one of four major face attributes (pose, identity, expression, and style) that can be used both for discriminative tasks and for manipulating all four attributes in an explicit manner. The resulting architecture achieves state-of-the-art image quality, good discrimination and face retrieval results on each of the four attributes, and supports various face editing tasks using a face representation of only 99 dimensions.*
 
-- ### *The repository is still in preperation. Trained models and documentation will follow shortly.*
-
-
 ## Requirements
 
 - Linux (not tested on other platforms)
@@ -44,26 +41,6 @@ For testing you may need (depending on which evaluations you want to run):
 ### Edit dataset paths in config.py
 
 Please change the paths in config.py according your dataset locations.
-
-
-### Download trained models (optional)
-
-Run `download_models.sh`. *[todo]*
-
-
-## Test
-
-### Reconstruct faces
-
-### Generate random faces
-
-### Edit faces
-
-### Extract face embedding
-
-### Performance evaluation on LFW
-
-### Performance evaluation on AffectNet
 
 
 ## Training
